@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="#">MyBrand</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Ana Sayfa</a></li>
+                <li><a href="#features">Özellikler</a></li>
+                <li><a href="#about">Hakkında</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Harika Bir Ürünle Tanışın</h1>
+                <p class="hero-subtitle">Modern, hızlı ve güvenilir çözümlerle işinizi bir üst seviyeye taşıyın.</p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary">Keşfet</a>
+                    <a href="#contact" class="btn btn-outline">İletişime Geç</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Özellikler</h2>
+            <p class="section-subtitle">Neden bizi tercih etmelisiniz?</p>
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Hızlı</h3>
+                    <p>Ultra hızlı performans ile işlemlerinizi anında tamamlayın.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">&#128274;</div>
+                    <h3>Güvenli</h3>
+                    <p>En üst düzey güvenlik protokolleri ile verileriniz koruma altında.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">&#127757;</div>
+                    <h3>Responsive</h3>
+                    <p>Her cihazda mükemmel görünüm ve kullanıcı deneyimi.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">&#128200;</div>
+                    <h3>Analitik</h3>
+                    <p>Detaylı analitik raporlarla işinizi daha iyi anlayın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Hakkımızda</h2>
+                    <p>Biz, kullanıcı odaklı ve yenilikçi dijital çözümler sunan bir ekibiz. Müşterilerimizin başarısı için çalışıyor, en iyi deneyimi sunmaya odaklanıyoruz.</p>
+                    <p>2020 yılından bu yana yüzlerce projeye imza attık ve her geçen gün büyümeye devam ediyoruz.</p>
+                    <a href="#contact" class="btn btn-primary">Bizimle Çalış</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="500">0</span>
+                        <span class="stat-label">Mutlu Müşteri</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="200">0</span>
+                        <span class="stat-label">Tamamlanan Proje</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Yıl Deneyim</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-subtitle">Bizimle iletişime geçin</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Adınız" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="E-posta adresiniz" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" placeholder="Mesajınız" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Gönder</button>
+            </form>
+            <div class="form-success" id="formSuccess">
+                Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyBrand. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
