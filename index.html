@@ -1,137 +1,839 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentCar - Araç Kiralama</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RentCar – Premium Araç Kiralama | Türkiye Geneli</title>
+  <meta name="description" content="RentCar ile Türkiye'nin 24 şehrinde premium araç kiralama. 450+ araç, anlık rezervasyon, 7/24 destek. Ekonomikten lükse geniş filo." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="RentCar – Premium Araç Kiralama" />
+  <meta property="og:description" content="Türkiye'nin 24 şehrinde 450+ araç. Anlık rezervasyon, 7/24 destek." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yldray.github.io/OtomasyonTesti/" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>" />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="#">&#128663; RentCar</a>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-brand" aria-label="RentCar ana sayfa">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+        RentCar
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu" aria-label="Ana menü">
+        <ul class="nav-menu" role="list">
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#fleet">Araçlar</a></li>
+          <li><a href="#why-us">Neden Biz</a></li>
+          <li><a href="#how-it-works">Nasıl Çalışır</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#reservation" class="nav-cta">Rezervasyon</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="container hero-inner">
+
+        <!-- Left: copy -->
+        <div class="hero-copy">
+          <span class="hero-badge">Türkiye'nin En Güvenilir Filosu</span>
+          <h1 id="heroTitle" class="hero-title">Her Yolculukta<br>Premium Deneyim</h1>
+          <p class="hero-subtitle">450'den fazla araç, 24 şehir, anlık rezervasyon. Ekonomikten lükse – hayalinizeki yolculuğa uygun aracı şimdi kiralayın.</p>
+          <div class="hero-buttons">
+            <a href="#fleet" class="btn btn-primary">Araçları Gör</a>
+            <a href="#how-it-works" class="btn btn-ghost">Nasıl Çalışır?</a>
+          </div>
+        </div>
+
+        <!-- Right: visual -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-car-card">
+            <svg class="hero-car-svg" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Car body -->
+              <rect x="20" y="50" width="160" height="35" rx="8" fill="white" fill-opacity="0.15"/>
+              <!-- Cabin -->
+              <path d="M50 50 L70 25 L130 25 L150 50 Z" fill="white" fill-opacity="0.2"/>
+              <!-- Windows -->
+              <path d="M72 47 L82 30 L100 30 L100 47 Z" fill="white" fill-opacity="0.4"/>
+              <path d="M103 47 L103 30 L121 30 L131 47 Z" fill="white" fill-opacity="0.4"/>
+              <!-- Wheels -->
+              <circle cx="65" cy="85" r="12" fill="white" fill-opacity="0.25"/>
+              <circle cx="65" cy="85" r="6" fill="white" fill-opacity="0.4"/>
+              <circle cx="135" cy="85" r="12" fill="white" fill-opacity="0.25"/>
+              <circle cx="135" cy="85" r="6" fill="white" fill-opacity="0.4"/>
+              <!-- Headlights -->
+              <rect x="170" y="57" width="10" height="6" rx="3" fill="#fbbf24" fill-opacity="0.8"/>
+            </svg>
+            <div class="hero-car-info">
+              <div class="hero-car-badge">Premium SUV</div>
+              <div class="hero-car-price">₺850<span>/gün</span></div>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç/kapat">
-                <span></span>
-                <span></span>
-                <span></span>
+          </div>
+
+          <div class="hero-float hero-float-1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Onaylı &amp; Sigortalı
+          </div>
+          <div class="hero-float hero-float-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7/24 Destek
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Booking Widget -->
+      <div class="container">
+        <div class="booking-widget" role="search" aria-label="Araç arama formu">
+          <h2 class="booking-title">Hızlı Rezervasyon</h2>
+          <form class="booking-form" id="bookingForm" novalidate>
+            <div class="booking-row">
+
+              <div class="booking-field">
+                <label for="pickupLocation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Teslim Alma
+                </label>
+                <select id="pickupLocation" name="pickupLocation" required aria-required="true">
+                  <option value="">Şehir seçin</option>
+                  <option value="istanbul">İstanbul</option>
+                  <option value="ankara">Ankara</option>
+                  <option value="izmir">İzmir</option>
+                  <option value="antalya">Antalya</option>
+                  <option value="bursa">Bursa</option>
+                  <option value="adana">Adana</option>
+                  <option value="konya">Konya</option>
+                  <option value="gaziantep">Gaziantep</option>
+                </select>
+                <span class="field-error" id="pickupLocationError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="dropoffLocation">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Teslim Etme
+                </label>
+                <select id="dropoffLocation" name="dropoffLocation" required aria-required="true">
+                  <option value="">Şehir seçin</option>
+                  <option value="istanbul">İstanbul</option>
+                  <option value="ankara">Ankara</option>
+                  <option value="izmir">İzmir</option>
+                  <option value="antalya">Antalya</option>
+                  <option value="bursa">Bursa</option>
+                  <option value="adana">Adana</option>
+                  <option value="konya">Konya</option>
+                  <option value="gaziantep">Gaziantep</option>
+                </select>
+                <span class="field-error" id="dropoffLocationError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="pickupDate">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  Alış Tarihi
+                </label>
+                <input type="date" id="pickupDate" name="pickupDate" required aria-required="true" />
+                <span class="field-error" id="pickupDateError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="pickupTime">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Alış Saati
+                </label>
+                <input type="time" id="pickupTime" name="pickupTime" required aria-required="true" value="10:00" />
+                <span class="field-error" id="pickupTimeError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="dropoffDate">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  İade Tarihi
+                </label>
+                <input type="date" id="dropoffDate" name="dropoffDate" required aria-required="true" />
+                <span class="field-error" id="dropoffDateError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="dropoffTime">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  İade Saati
+                </label>
+                <input type="time" id="dropoffTime" name="dropoffTime" required aria-required="true" value="10:00" />
+                <span class="field-error" id="dropoffTimeError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-field">
+                <label for="carClass">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+                  Araç Sınıfı
+                </label>
+                <select id="carClass" name="carClass" required aria-required="true">
+                  <option value="">Sınıf seçin</option>
+                  <option value="ekonomik">Ekonomik</option>
+                  <option value="suv">SUV</option>
+                  <option value="luks">Lüks</option>
+                </select>
+                <span class="field-error" id="carClassError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="booking-submit">
+                <button type="submit" class="btn btn-primary btn-lg" id="bookingSubmit">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                  Fiyatı Gör
+                </button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FLEET ====== -->
+    <section class="fleet section" id="fleet" aria-labelledby="fleetTitle">
+      <div class="container">
+        <p class="section-eyebrow">Filomuz</p>
+        <h2 id="fleetTitle" class="section-title">Araçlarımızı Keşfedin</h2>
+        <p class="section-subtitle">Her bütçeye ve ihtiyaca uygun, bakımlı ve sigortalı araçlar.</p>
+
+        <!-- Filter tabs -->
+        <div class="fleet-filters" role="tablist" aria-label="Araç sınıfı filtresi">
+          <button class="filter-tab active" role="tab" aria-selected="true" data-filter="all">Tümü</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="ekonomik">Ekonomik</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="suv">SUV</button>
+          <button class="filter-tab" role="tab" aria-selected="false" data-filter="luks">Lüks</button>
+        </div>
+
+        <!-- Car grid -->
+        <div class="cars-grid" id="carsGrid" role="list">
+
+          <article class="car-card" data-category="ekonomik" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder ekonomik">
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="25" y="48" width="150" height="32" rx="6" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M45 48 L62 28 L138 28 L155 48 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M65 45 L74 32 L95 32 L95 45 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M98 45 L98 32 L119 32 L128 45 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="68" cy="80" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="68" cy="80" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="132" cy="80" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="132" cy="80" r="5" fill="currentColor" fill-opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="car-badge">Ekonomik</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">Renault Clio</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Manuel
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Benzin
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  5 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺450</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('Renault Clio')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card" data-category="ekonomik" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder ekonomik">
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="25" y="48" width="150" height="32" rx="6" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M45 48 L62 28 L138 28 L155 48 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M65 45 L74 32 L95 32 L95 45 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M98 45 L98 32 L119 32 L128 45 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="68" cy="80" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="68" cy="80" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="132" cy="80" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="132" cy="80" r="5" fill="currentColor" fill-opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="car-badge">Ekonomik</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">Volkswagen Polo</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Otomatik
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Dizel
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  5 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺520</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('Volkswagen Polo')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card" data-category="suv" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder suv">
+                <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="15" y="45" width="170" height="40" rx="8" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M35 45 L55 22 L145 22 L165 45 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M60 42 L70 28 L95 28 L95 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M98 42 L98 28 L123 28 L133 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="62" cy="85" r="12" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="62" cy="85" r="6" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="138" cy="85" r="12" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="138" cy="85" r="6" fill="currentColor" fill-opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="car-badge">SUV</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">Toyota RAV4</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Otomatik
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Hibrit
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  5 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺850</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('Toyota RAV4')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card" data-category="suv" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder suv">
+                <svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="15" y="45" width="170" height="40" rx="8" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M35 45 L55 22 L145 22 L165 45 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M60 42 L70 28 L95 28 L95 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M98 42 L98 28 L123 28 L133 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="62" cy="85" r="12" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="62" cy="85" r="6" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="138" cy="85" r="12" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="138" cy="85" r="6" fill="currentColor" fill-opacity="0.6"/>
+                </svg>
+              </div>
+              <span class="car-badge">SUV</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">Ford Explorer</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Otomatik
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Benzin
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  7 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺950</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('Ford Explorer')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card" data-category="luks" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder luks">
+                <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="20" y="45" width="160" height="28" rx="5" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M40 45 L60 22 L140 22 L160 45 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M64 42 L72 28 L97 28 L97 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M100 42 L100 28 L125 28 L133 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="65" cy="73" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="65" cy="73" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="135" cy="73" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="135" cy="73" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <rect x="155" y="50" width="12" height="5" rx="2" fill="#fbbf24" fill-opacity="0.8"/>
+                  <rect x="33" y="50" width="8" height="5" rx="2" fill="#fbbf24" fill-opacity="0.8"/>
+                </svg>
+              </div>
+              <span class="car-badge car-badge-gold">Lüks</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">Mercedes E-Class</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Otomatik
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Dizel
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  5 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺1.800</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('Mercedes E-Class')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="car-card" data-category="luks" role="listitem" data-animate>
+            <div class="car-img-wrap">
+              <div class="car-img-placeholder luks">
+                <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect x="20" y="45" width="160" height="28" rx="5" fill="currentColor" fill-opacity="0.3"/>
+                  <path d="M40 45 L60 22 L140 22 L160 45 Z" fill="currentColor" fill-opacity="0.35"/>
+                  <path d="M64 42 L72 28 L97 28 L97 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <path d="M100 42 L100 28 L125 28 L133 42 Z" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="65" cy="73" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="65" cy="73" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <circle cx="135" cy="73" r="10" fill="currentColor" fill-opacity="0.4"/>
+                  <circle cx="135" cy="73" r="5" fill="currentColor" fill-opacity="0.6"/>
+                  <rect x="155" y="50" width="12" height="5" rx="2" fill="#fbbf24" fill-opacity="0.8"/>
+                  <rect x="33" y="50" width="8" height="5" rx="2" fill="#fbbf24" fill-opacity="0.8"/>
+                </svg>
+              </div>
+              <span class="car-badge car-badge-gold">Lüks</span>
+            </div>
+            <div class="car-body">
+              <h3 class="car-name">BMW 5 Serisi</h3>
+              <ul class="car-specs" aria-label="Araç özellikleri">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Otomatik
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+                  Benzin
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4"/><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                  5 Kişi
+                </li>
+              </ul>
+              <div class="car-footer">
+                <div class="car-price"><span>₺2.100</span>/gün</div>
+                <div class="car-actions">
+                  <button class="btn btn-sm btn-outline-dark" onclick="showCarDetail('BMW 5 Serisi')">Detay</button>
+                  <a href="#reservation" class="btn btn-sm btn-primary">Hemen Kirala</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== WHY US ====== -->
+    <section class="why-us section" id="why-us" aria-labelledby="whyUsTitle">
+      <div class="container">
+        <p class="section-eyebrow">Avantajlarımız</p>
+        <h2 id="whyUsTitle" class="section-title">Neden RentCar?</h2>
+        <p class="section-subtitle">Müşterilerimizin bizi tercih etmesinin temel nedenleri</p>
+
+        <div class="why-grid">
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+            </div>
+            <h3>Geniş Araç Filosu</h3>
+            <p>450'den fazla bakımlı araçla her ihtiyaca ve her bütçeye uygun seçenekler sunuyoruz.</p>
+          </div>
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Şeffaf Fiyatlandırma</h3>
+            <p>Gizli ücret yok. Rezervasyon anında gördüğünüz fiyat, ödeyeceğiniz fiyattır.</p>
+          </div>
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+            </div>
+            <h3>7/24 Destek</h3>
+            <p>Yolda karşılaştığınız her sorunda yanınızdayız. 7 gün 24 saat ulaşılabilir destek hattı.</p>
+          </div>
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Tam Sigorta Güvencesi</h3>
+            <p>Tüm araçlarımız kapsamlı kasko ve trafik sigortasıyla güvence altındadır.</p>
+          </div>
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Hızlı Teslim</h3>
+            <p>Rezervasyonunuzu onaylayın, aracınız belirlediğiniz saatte kapınızda veya ofisimizde hazır olsun.</p>
+          </div>
+
+          <div class="why-card" data-animate>
+            <div class="why-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>24 Şehirde Hizmet</h3>
+            <p>Türkiye'nin 24 büyük şehrinde ofislerimiz ve teslim noktalarımızla geniş erişim ağı.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== HOW IT WORKS ====== -->
+    <section class="how-it-works section" id="how-it-works" aria-labelledby="howTitle">
+      <div class="container">
+        <p class="section-eyebrow">Süreç</p>
+        <h2 id="howTitle" class="section-title">Nasıl Çalışır?</h2>
+        <p class="section-subtitle">Sadece 3 adımda aracınızı kiralayın</p>
+
+        <ol class="steps-list" aria-label="Kiralama adımları">
+          <li class="step-item" data-animate>
+            <div class="step-number" aria-hidden="true">01</div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Lokasyon Seç</h3>
+            <p>Teslim alma ve iade edeceğiniz şehri ve noktayı seçin. 24 şehirde ofisimiz mevcut.</p>
+          </li>
+          <li class="step-connector" aria-hidden="true"></li>
+          <li class="step-item" data-animate>
+            <div class="step-number" aria-hidden="true">02</div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Tarih &amp; Araç Seç</h3>
+            <p>Kiralama tarihlerinizi ve size uygun araç sınıfını belirleyin. Anlık fiyat görüntüleyin.</p>
+          </li>
+          <li class="step-connector" aria-hidden="true"></li>
+          <li class="step-item" data-animate>
+            <div class="step-number" aria-hidden="true">03</div>
+            <div class="step-icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+            </div>
+            <h3>Aracını Teslim Al</h3>
+            <p>Onaylanan rezervasyon sonrası aracınız temiz, bakımlı ve hazır şekilde sizi bekler.</p>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONIALS ====== -->
+    <section class="testimonials section" id="testimonials" aria-labelledby="testTitle">
+      <div class="container">
+        <p class="section-eyebrow">Müşterilerimiz</p>
+        <h2 id="testTitle" class="section-title">Müşteri Yorumları</h2>
+        <p class="section-subtitle">12.500'den fazla mutlu müşterimizden bazıları</p>
+
+        <div class="testimonials-grid">
+
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 yıldız">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p>"İş seyahatlerim için düzenli kullandığım RentCar, her seferinde beklentilerimi karşılıyor. Araçlar tertemiz, personel çok ilgili. Kesinlikle tavsiye ederim."</p>
+            <footer>
+              <div class="testimonial-avatar" aria-hidden="true">AK</div>
+              <div>
+                <cite class="testimonial-name">Ahmet Kılıç</cite>
+                <span class="testimonial-role">Satış Müdürü, İstanbul</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 yıldız">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p>"Antalya tatilimiz için araç kiraladık. Online rezervasyon çok kolaydı, fiyat gayet uygundu. Havalimanında araç hazır bekliyordu. Harika bir deneyimdi!"</p>
+            <footer>
+              <div class="testimonial-avatar" aria-hidden="true">SY</div>
+              <div>
+                <cite class="testimonial-name">Selin Yılmaz</cite>
+                <span class="testimonial-role">Öğretmen, Ankara</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card" data-animate>
+            <div class="testimonial-stars" aria-label="5 yıldız">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p>"Şirketimiz için kurumsal anlaşma yaptık. Fiyatlar rekabetçi, araçlar her zaman bakımlı. Müşteri temsilcimiz her konuda yardımcı oluyor. Çok memnunuz."</p>
+            <footer>
+              <div class="testimonial-avatar" aria-hidden="true">MÇ</div>
+              <div>
+                <cite class="testimonial-name">Mehmet Çelik</cite>
+                <span class="testimonial-role">CEO, İzmir</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+
+        <!-- Partner logos (placeholder) -->
+        <div class="partners-band" aria-label="İş ortaklarımız">
+          <p class="partners-label">Güvenilen Markalar &amp; İş Ortakları</p>
+          <div class="partners-logos">
+            <div class="partner-logo">AVIS</div>
+            <div class="partner-logo">EUROPCAR</div>
+            <div class="partner-logo">HERTZ</div>
+            <div class="partner-logo">BUDGET</div>
+            <div class="partner-logo">SIXT</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section class="about section" id="about" aria-labelledby="aboutTitle">
+      <div class="container about-inner">
+
+        <div class="about-text" data-animate>
+          <p class="section-eyebrow">Hikayemiz</p>
+          <h2 id="aboutTitle">Yolculuğunuzu<br>Güvenle Şekillendiriyoruz</h2>
+          <p>2015'ten bu yana 12.500'den fazla müşteriye hizmet veren RentCar, Türkiye'nin araç kiralama sektöründe güvenilirlik ve şeffaflığın simgesi haline geldi. Her kademedeki profesyonelden tatil ailelerine kadar geniş bir müşteri kitlesine hitap ediyoruz.</p>
+          <p>Filosumuzu sürekli yeniliyoruz; araçlarımızın ortalama yaşı 18 aydır. Her araç teslim öncesinde 50 nokta üzerinden detaylı teknik kontrol geçirir.</p>
+          <a href="#reservation" class="btn btn-primary">Rezervasyon Yap</a>
+        </div>
+
+        <div class="about-badges" data-animate>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <strong>12.500+</strong>
+              <span>Mutlu Müşteri</span>
+            </div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+            </div>
+            <div>
+              <strong>450+</strong>
+              <span>Araç Filosu</span>
+            </div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <strong>24</strong>
+              <span>Şehirde Ofis</span>
+            </div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <strong>4.8 / 5</strong>
+              <span>Müşteri Puanı</span>
+            </div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <strong>ISO 9001</strong>
+              <span>Sertifikası</span>
+            </div>
+          </div>
+          <div class="trust-badge">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <strong>7/24</strong>
+              <span>Yol Yardımı</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== RESERVATION ====== -->
+    <section class="reservation section" id="reservation" aria-labelledby="resTitle">
+      <div class="container">
+        <p class="section-eyebrow">İletişim</p>
+        <h2 id="resTitle" class="section-title">Rezervasyon Talebi</h2>
+        <p class="section-subtitle">Formu doldurun, en kısa sürede sizi arayalım</p>
+
+        <div class="res-wrapper">
+          <form class="res-form" id="reservationForm" novalidate aria-label="Rezervasyon formu">
+
+            <div class="res-form-grid">
+              <div class="form-field">
+                <label for="resName">Ad Soyad <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="resName" name="resName" placeholder="Adınız Soyadınız" required aria-required="true" autocomplete="name" />
+                <span class="field-error" id="resNameError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="resEmail">E-posta <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="resEmail" name="resEmail" placeholder="ornek@email.com" required aria-required="true" autocomplete="email" />
+                <span class="field-error" id="resEmailError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="resPhone">Telefon <span class="required" aria-hidden="true">*</span></label>
+                <input type="tel" id="resPhone" name="resPhone" placeholder="0(5XX) XXX XX XX" required aria-required="true" autocomplete="tel" />
+                <span class="field-error" id="resPhoneError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="resCarClass">Araç Sınıfı <span class="required" aria-hidden="true">*</span></label>
+                <select id="resCarClass" name="resCarClass" required aria-required="true">
+                  <option value="">Seçin</option>
+                  <option value="ekonomik">Ekonomik</option>
+                  <option value="suv">SUV</option>
+                  <option value="luks">Lüks</option>
+                </select>
+                <span class="field-error" id="resCarClassError" role="alert" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field form-field-full">
+                <label for="resMessage">Notlarınız</label>
+                <textarea id="resMessage" name="resMessage" rows="4" placeholder="Kiralama tarihlerini, özel isteklerinizi veya sorularınızı belirtebilirsiniz..."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="resSubmit">
+              <span id="resSubmitText">Rezervasyon Talebi Gönder</span>
+              <span id="resSubmitSpinner" class="btn-spinner" aria-hidden="true" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="spin"><path d="M21 12a9 9 0 11-6.219-8.56"/></svg>
+                Gönderiliyor...
+              </span>
             </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#features">Neden Biz?</a></li>
-                <li><a href="#about">Hakkında</a></li>
-                <li><a href="#contact">Rezervasyon</a></li>
-            </ul>
-        </div>
-    </nav>
+          </form>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Konforlu Yolculuk, Uygun Fiyat</h1>
-                <p class="hero-subtitle">Geniş araç filomuzdan istediğinizi seçin, hızlı ve kolay rezervasyon yapın. Güvenli ve konforlu yolculuk garantisi.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Hemen Kirala</a>
-                    <a href="#features" class="btn btn-outline">Araçları İncele</a>
-                </div>
+          <div class="res-success" id="resSuccess" style="display:none;" role="status" aria-live="polite">
+            <div class="res-success-icon" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             </div>
+            <h3>Talebiniz Alındı!</h3>
+            <p>Rezervasyon talebiniz başarıyla iletildi. Ekibimiz en kısa sürede sizi arayacak.</p>
+            <button class="btn btn-outline-primary" id="resReset">Yeni Rezervasyon</button>
+          </div>
         </div>
+
+      </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <h2 class="section-title">Neden RentCar?</h2>
-            <p class="section-subtitle">Size en iyi araç kiralama deneyimini sunuyoruz</p>
-            <div class="features-grid">
-                <div class="feature-card" data-animate>
-                    <div class="feature-icon">&#128663;</div>
-                    <h3>Geniş Araç Filosu</h3>
-                    <p>Ekonomik araçlardan lüks otomobillere kadar her ihtiyaca uygun geniş araç seçeneğimiz mevcuttur.</p>
-                </div>
-                <div class="feature-card" data-animate>
-                    <div class="feature-icon">&#128176;</div>
-                    <h3>Uygun Fiyatlar</h3>
-                    <p>Rekabetçi fiyatlarımız ve özel kampanyalarımızla bütçenize uygun kiralama imkânı sunuyoruz.</p>
-                </div>
-                <div class="feature-card" data-animate>
-                    <div class="feature-icon">&#128205;</div>
-                    <h3>7/24 Destek</h3>
-                    <p>Yolda herhangi bir sorunla karşılaşırsanız 7 gün 24 saat müşteri destek hattımız hizmetinizdedir.</p>
-                </div>
-                <div class="feature-card" data-animate>
-                    <div class="feature-icon">&#9989;</div>
-                    <h3>Hızlı Teslimat</h3>
-                    <p>Araçlarınızı belirttiğiniz adrese teslim ediyor, kiralama sürecini olabildiğince kolay tutuyoruz.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  </main>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Hakkımızda</h2>
-                    <p>RentCar olarak 2015 yılından bu yana müşterilerimize güvenli, konforlu ve uygun fiyatlı araç kiralama hizmeti sunuyoruz.</p>
-                    <p>Geniş araç filomuz, deneyimli ekibimiz ve müşteri memnuniyetine verdiğimiz önem ile sektörde güvenilir bir isim haline geldik.</p>
-                    <a href="#contact" class="btn btn-primary">Rezervasyon Yap</a>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-target="1200">0</span>
-                        <span class="stat-label">Mutlu Müşteri</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="85">0</span>
-                        <span class="stat-label">Araç Kapasitesi</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="10">0</span>
-                        <span class="stat-label">Yıl Deneyim</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-brand" aria-label="RentCar ana sayfa">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/><circle cx="12" cy="21" r="1"/><circle cx="20" cy="21" r="1"/></svg>
+          RentCar
+        </a>
+        <p>Türkiye'nin en güvenilir araç kiralama platformu.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigasyon">
+        <ul>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#fleet">Araçlar</a></li>
+          <li><a href="#why-us">Neden Biz</a></li>
+          <li><a href="#about">Hakkımızda</a></li>
+          <li><a href="#reservation">Rezervasyon</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 RentCar Araç Kiralama. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Rezervasyon</h2>
-            <p class="section-subtitle">Hemen rezervasyon yapın, biz sizi arayalım</p>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Adınız Soyadınız" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="E-posta adresiniz" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" placeholder="Telefon numaranız">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" rows="5" placeholder="Kiralama tarihleri ve araç tercihinizi belirtin..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Rezervasyon Talebi Gönder</button>
-            </form>
-            <div class="form-success" id="formSuccess">
-                Rezervasyon talebiniz başarıyla alındı! En kısa sürede sizi arayacağız.
-            </div>
-        </div>
-    </section>
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 RentCar Araç Kiralama. Tüm hakları saklıdır.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
