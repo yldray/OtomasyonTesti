@@ -6,15 +6,15 @@
 }
 
 :root {
-    --primary: #4f46e5;
-    --primary-dark: #3730a3;
-    --secondary: #f9fafb;
-    --text: #111827;
-    --text-light: #6b7280;
+    --primary: #f97316;
+    --primary-dark: #ea580c;
+    --secondary: #fff7ed;
+    --text: #1c1917;
+    --text-light: #78716c;
     --white: #ffffff;
-    --border: #e5e7eb;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    --border: #fed7aa;
+    --shadow: 0 4px 6px -1px rgba(249, 115, 22, 0.12);
+    --shadow-lg: 0 10px 25px -5px rgba(249, 115, 22, 0.2);
     --transition: all 0.3s ease;
 }
 
@@ -98,7 +98,7 @@ body {
 
 /* ========== HERO ========== */
 .hero {
-    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
     color: var(--white);
     padding: 5rem 0;
     text-align: center;
@@ -321,7 +321,7 @@ body {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
 }
 
 .form-group textarea {
