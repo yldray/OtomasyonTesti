@@ -6,9 +6,9 @@
 /* ---------- 1. CSS Custom Properties (Theme) ---------- */
 :root {
   /* Colors */
-  --primary:        #f97316;
-  --primary-dark:   #ea580c;
-  --primary-light:  #fff7ed;
+  --primary:        #6366f1;
+  --primary-dark:   #4f46e5;
+  --primary-light:  #eef2ff;
   --bg:             #ffffff;
   --surface:        #f8fafc;
   --surface-alt:    #f1f5f9;
@@ -20,8 +20,8 @@
   --success-bg:     #d1fae5;
   --error:          #dc2626;
   --error-bg:       #fee2e2;
-  --gold:           #b45309;
-  --gold-bg:        #fef3c7;
+  --gold:           #7c3aed;
+  --gold-bg:        #ede9fe;
 
   /* Typography */
   --font:           'Segoe UI', system-ui, -apple-system, sans-serif;
@@ -55,7 +55,7 @@
   --shadow:     0 4px 16px -2px rgb(0 0 0 / .10), 0 2px 6px -1px rgb(0 0 0 / .06);
   --shadow-lg:  0 10px 30px -4px rgb(0 0 0 / .14), 0 4px 12px -2px rgb(0 0 0 / .08);
   --shadow-xl:  0 20px 50px -6px rgb(0 0 0 / .18);
-  --shadow-primary: 0 4px 16px -2px rgb(249 115 22 / .35);
+  --shadow-primary: 0 4px 16px -2px rgb(99 102 241 / .35);
 
   /* Transitions */
   --ease:           cubic-bezier(.4, 0, .2, 1);
@@ -335,7 +335,7 @@ button {
 
 /* ---------- 6. Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 40%, #1e1b4b 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 40%, #1a1040 100%);
   color: #fff;
   padding: var(--space-20) 0 0;
   overflow: hidden;
@@ -346,7 +346,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 65% 40%, rgba(249,115,22,.25) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 60% at 65% 40%, rgba(99,102,241,.35) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -366,9 +366,9 @@ button {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: rgba(249,115,22,.2);
-  border: 1px solid rgba(249,115,22,.4);
-  color: #fdba74;
+  background: rgba(99,102,241,.2);
+  border: 1px solid rgba(99,102,241,.4);
+  color: #a5b4fc;
   font-size: .8rem;
   font-weight: 600;
   letter-spacing: .06em;
@@ -422,7 +422,7 @@ button {
 .hero-car-svg {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 8px 24px rgba(249,115,22,.3));
+  filter: drop-shadow(0 8px 24px rgba(99,102,241,.3));
 }
 
 .hero-car-info {
@@ -433,13 +433,13 @@ button {
 }
 
 .hero-car-badge {
-  background: rgba(249,115,22,.2);
-  color: #fdba74;
+  background: rgba(99,102,241,.2);
+  color: #a5b4fc;
   font-size: .8rem;
   font-weight: 600;
   padding: .25rem .75rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(249,115,22,.3);
+  border: 1px solid rgba(99,102,241,.3);
 }
 
 .hero-car-price {
@@ -469,7 +469,7 @@ button {
   border-radius: var(--radius-full);
   white-space: nowrap;
 }
-.hero-float svg { color: #86efac; flex-shrink: 0; }
+.hero-float svg { color: #86efac; flex-shrink: 0; }  /* keep green checkmarks */
 
 .hero-float-1 { top: 10%; right: -8%; }
 .hero-float-2 { bottom: 15%; left: -8%; }
@@ -552,7 +552,7 @@ button {
 .booking-field input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(249,115,22,.15);
+  box-shadow: 0 0 0 3px rgba(99,102,241,.15);
   background: var(--bg);
 }
 
@@ -656,16 +656,16 @@ button {
 }
 
 .car-img-placeholder.ekonomik {
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-  color: #2563eb;
+  background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+  color: #4f46e5;
 }
 .car-img-placeholder.suv {
-  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-  color: #059669;
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  color: #7c3aed;
 }
 .car-img-placeholder.luks {
-  background: linear-gradient(135deg, #fef3c7, #fde68a);
-  color: #b45309;
+  background: linear-gradient(135deg, #fae8ff, #f5d0fe);
+  color: #a21caf;
 }
 
 .car-img-placeholder svg {
@@ -687,7 +687,7 @@ button {
 }
 
 .car-badge-gold {
-  background: rgba(254,243,199,.95) !important;
+  background: rgba(237,233,254,.95) !important;
   color: var(--gold) !important;
 }
 
@@ -809,11 +809,11 @@ button {
 
 /* ---------- 10. How It Works ---------- */
 .how-it-works {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
   color: #fff;
 }
 
-.how-it-works .section-eyebrow { color: #fdba74; }
+.how-it-works .section-eyebrow { color: #a5b4fc; }
 .how-it-works .section-title { color: #fff; }
 .how-it-works .section-subtitle { color: rgba(255,255,255,.65); }
 
@@ -848,7 +848,7 @@ button {
 .step-connector {
   flex: 0 0 60px;
   height: 2px;
-  background: linear-gradient(90deg, rgba(249,115,22,.5), rgba(249,115,22,.2));
+  background: linear-gradient(90deg, rgba(99,102,241,.5), rgba(99,102,241,.2));
   margin-top: 48px;
   border-radius: 2px;
   align-self: flex-start;
@@ -872,11 +872,11 @@ button {
   justify-content: center;
   width: 72px;
   height: 72px;
-  background: rgba(249,115,22,.15);
+  background: rgba(99,102,241,.15);
   color: var(--primary);
   border-radius: var(--radius-xl);
   margin-bottom: var(--space-4);
-  border: 1px solid rgba(249,115,22,.25);
+  border: 1px solid rgba(99,102,241,.25);
 }
 
 .step-item h3 {
@@ -930,7 +930,7 @@ button {
 .testimonial-stars {
   display: flex;
   gap: 2px;
-  color: #f59e0b;
+  color: #818cf8;
 }
 
 .testimonial-card > p {
@@ -1153,7 +1153,7 @@ button {
 .form-field textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(249,115,22,.15);
+  box-shadow: 0 0 0 3px rgba(99,102,241,.15);
 }
 
 .form-field input.error,
@@ -1196,7 +1196,7 @@ button {
 
 /* ---------- 14. Footer ---------- */
 .footer {
-  background: #0f172a;
+  background: #1e1b4b;
   color: rgba(255,255,255,.7);
 }
 
@@ -1248,7 +1248,7 @@ button {
   bottom: var(--space-6);
   left: 50%;
   transform: translateX(-50%) translateY(80px);
-  background: #0f172a;
+  background: #1e1b4b;
   color: #fff;
   padding: .875rem 1.5rem;
   border-radius: var(--radius-lg);
